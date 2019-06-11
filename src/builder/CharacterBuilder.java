@@ -12,11 +12,9 @@ public abstract class CharacterBuilder {
 
     public abstract Character build();
 
-    public abstract void setName(String name);
+    public abstract Character setName(String name);
 
-    public abstract void setJob();
+    public abstract Character setJob();
 
-    public abstract void setSkills() throws Exception;
-
-    public abstract void setAge(int age);
+    public abstract Character setSkills() throws Exception;
 }

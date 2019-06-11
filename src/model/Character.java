@@ -8,7 +8,6 @@ public class Character {
     private Job job;
     private int level;
     private List<Skill> skills;
-    private int age;
 
     public Character(){ }
 
@@ -37,21 +36,20 @@ public class Character {
         return skills;
     }
 
-    public void setName(String name) {
+    public Character setName(String name) {
         this.name = name;
+        return this;
     }
 
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public void setJob(Job job) {
+    public Character setJob(Job job) {
         this.job = job;
+        return this;
     }
 
-    public void addSkill(Skill skill) throws Exception {
+    public Character addSkill(Skill skill) throws Exception {
         if(skill == null)
             throw new Exception("Skill is null");
         this.skills.add(skill);
+        return this;
     }
 }
