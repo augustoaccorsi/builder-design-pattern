@@ -15,9 +15,11 @@ public class Test {
         Job job = new Job();
         Skill skill = new Skill();
 
-        Character priest = new PriestCharacterBuilder().build().setName("Priest");
-        Character warrior = new WarriorCharacterBuilder().build().setName("Warrior").setJob(job);
-        Character wizard = new WizardCharacterBuilder().build().setName("Wizard").setJob(job).addSkill(skill);
+        Character priest = new PriestCharacterBuilder().setName("Priest").build();
+        Character warrior = new WarriorCharacterBuilder().setName("Warrior").setJob(job).build();
+        Character wizard = new WizardCharacterBuilder().setName("Wizard").setJob(job).setSkills(skill).build();
         
     }
   }
+
+  

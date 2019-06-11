@@ -12,9 +12,17 @@ public abstract class CharacterBuilder {
 
     public abstract Character build();
 
-    public abstract Character setName(String name);
+    public abstract CharacterBuilder setName(String name);
 
-    public abstract Character setJob();
+    public abstract CharacterBuilder setJob(Job job);
 
-    public abstract Character setSkills() throws Exception;
+    public abstract CharacterBuilder setSkills(Skill skill) throws Exception;
 }
+
+
+
+
+
+
+
+

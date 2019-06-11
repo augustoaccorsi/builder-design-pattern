@@ -20,33 +20,20 @@ public class Character {
         }
     }
 
-    public String getName() {
-        return name;
+    public String getName() { return name; }
+
+    public Job getJob() { return job; }
+
+    public int getLevel() { return level;
     }
 
-    public Job getJob() {
-        return job;
-    }
+    public List<Skill> getSkills() { return skills; }
 
-    public int getLevel() {
-        return level;
-    }
+    public Character setName(String name) { this.name = name; return this; }
 
-    public List<Skill> getSkills() {
-        return skills;
-    }
+    public Character setJob(Job job) { this.job = job; return this; }
 
-    public Character setName(String name) {
-        this.name = name;
-        return this;
-    }
-
-    public Character setJob(Job job) {
-        this.job = job;
-        return this;
-    }
-
-    public Character addSkill(Skill skill) throws Exception {
+    public Character addSkill(Skill skill) throws Exception { 
         if(skill == null)
             throw new Exception("Skill is null");
         this.skills.add(skill);

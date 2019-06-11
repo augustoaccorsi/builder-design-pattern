@@ -15,21 +15,20 @@ public class WizardCharacterBuilder extends CharacterBuilder {
     }
 
     @Override
-    public Character setName(String name) {
+    public CharacterBuilder setName(String name) {
         this.character.setName(name);
-        return this.character;
+        return this;
     }
 
     @Override
-    public Character setJob() {
-        this.character.setJob(Job.WIZARD);
-        return this.character;
+    public  CharacterBuilder setJob(Job job) {
+        this.character.setJob(job);
+        return this;
     }
 
     @Override
-    public Character setSkills() throws Exception {
-        character.addSkill(new Skill("Fire ball", 30, false));
-        character.addSkill(new Skill("Ice spike", 30, false));
-        return this.character;
+    public CharacterBuilder setSkills(Skill skill) throws Exception {
+        character.addSkill(skill);
+        return this;
     }
 }

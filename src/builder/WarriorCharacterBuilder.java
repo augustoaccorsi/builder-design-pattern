@@ -16,20 +16,21 @@ public class WarriorCharacterBuilder extends CharacterBuilder {
     }
 
     @Override
-    public  setName(String name) {
+    public CharacterBuilder setName(String name) {
         this.character.setName(name);
-        return this.character;
+        return this;
     }
 
     @Override
-    public  setJob() {
-        this.character.setJob(Job.WARRIOR);
-        return this.character;
+    public CharacterBuilder setJob(Job job) {
+        this.character.setJob(job);
+        return this;
     }
 
     @Override
-    public  setSkills() throws Exception {
-        character.addSkill(new Skill("Falcon Punch", 55, false));
-        return this.character;
+    public CharacterBuilder setSkills(Skill skill) throws Exception {
+        character.addSkill(skill);
+        return this;
     }
 }
+
